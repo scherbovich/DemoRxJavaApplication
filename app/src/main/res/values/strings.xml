@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DemoRxJavaApplication</string>
+    <string name="error_network">Во время загрузки произошла ошибка</string>
+</resources>
