@@ -11,7 +11,6 @@ abstract class SingleUseCaseImpl<R>: SingleUseCase<R>, UseCaseImpl() {
             onError: ((t: Throwable) -> Unit)
     ) {
         disposeLast()
-        onLoading(true)
         lastDisposable = executeSingle()
                 .onErrorResumeNext { executeDbSingle() }
                 .subscribeOn(Schedulers.io())
