@@ -3,10 +3,7 @@ package andrew.developer.demorxjavaapplication.ui.main.data
 import andrew.developer.demorxjavaapplication.api.Api
 import andrew.developer.demorxjavaapplication.data.entity.AlbumsItem
 import andrew.developer.demorxjavaapplication.storage.dao.AlbumDao
-import andrew.developer.demorxjavaapplication.ui.main.domain.MainRepository
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
-import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
 class MainRepositoryImpl @Inject constructor(

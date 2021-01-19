@@ -4,10 +4,10 @@ import andrew.developer.demorxjavaapplication.api.Api
 import andrew.developer.demorxjavaapplication.di.FragmentScope
 import andrew.developer.demorxjavaapplication.storage.AppDatabase
 import andrew.developer.demorxjavaapplication.storage.dao.AlbumDao
+import andrew.developer.demorxjavaapplication.ui.main.data.MainRepository
 import andrew.developer.demorxjavaapplication.ui.main.data.MainRepositoryImpl
 import andrew.developer.demorxjavaapplication.ui.main.domain.MainInteractor
 import andrew.developer.demorxjavaapplication.ui.main.domain.MainInteractorImpl
-import andrew.developer.demorxjavaapplication.ui.main.domain.MainRepository
 import dagger.Module
 import dagger.Provides
 

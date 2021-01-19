@@ -1,7 +1,7 @@
-package andrew.developer.demorxjavaapplication.ui.main.domain
+package andrew.developer.demorxjavaapplication.ui.main.data
 
+import andrew.developer.demorxjavaapplication.data.Repository
 import andrew.developer.demorxjavaapplication.data.entity.AlbumsItem
-import andrew.developer.demorxjavaapplication.domain.Repository
 import io.reactivex.rxjava3.core.Single
 
 interface MainRepository: Repository {

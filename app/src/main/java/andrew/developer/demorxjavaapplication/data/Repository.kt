@@ -1,0 +1,3 @@
+package andrew.developer.demorxjavaapplication.data
+
+interface Repository
