@@ -6,6 +6,6 @@ import io.reactivex.rxjava3.core.Single
 
 interface MainRepository: Repository {
 
-    fun loadAlbums(): Single<ArrayList<AlbumsItem>>
-    fun getAlbums(): Single<ArrayList<AlbumsItem>>
+    fun loadAlbums(): Single<List<AlbumsItem>>
+    fun getAlbums(): Single<List<AlbumsItem>>
 }

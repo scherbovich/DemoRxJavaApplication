@@ -14,7 +14,7 @@ class MainRepositoryImpl @Inject constructor(
     private val api: Api
 ) : MainRepository {
 
-    override fun loadAlbums(): Single<ArrayList<AlbumsItem>> {
+    override fun loadAlbums(): Single<List<AlbumsItem>> {
         return api.getAlbums().map { items ->
             items.onEach {
                 dataBase.insert(MainMapper().mapToDB(it))
@@ -22,7 +22,7 @@ class MainRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun getAlbums(): Single<ArrayList<AlbumsItem>> {
+    override fun getAlbums(): Single<List<AlbumsItem>> {
         return Single.fromCallable { dataBase.getAlbums()
             ?.map { list -> MainMapper().mapToModel(list) } as ArrayList? }
     }

@@ -6,20 +6,20 @@ import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
 
 class MainInteractorImpl @Inject constructor(private val repository: MainRepository):
-        InteractorIml<MainInteractorOut, ArrayList<AlbumsItem>>(),
+        InteractorIml<MainInteractorOut, List<AlbumsItem>>(),
         MainInteractor {
 
     override fun loadAlbums() {
         launch( { out.isLoading(it) },
                 { out.onLoaded(it) },
-                { out.onError(it) })
+                { out.onError(it) } )
     }
 
-    override fun executeSingle(): Single<ArrayList<AlbumsItem>> {
+    override fun executeSingle(): Single<List<AlbumsItem>> {
         return repository.loadAlbums()
     }
 
-    override fun executeDbSingle(): Single<ArrayList<AlbumsItem>> {
+    override fun executeDbSingle(): Single<List<AlbumsItem>> {
         return repository.getAlbums()
     }
 }

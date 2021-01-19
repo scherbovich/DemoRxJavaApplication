@@ -13,11 +13,11 @@ class MainViewModel @Inject constructor(private val interactor: MainInteractor) 
         MainInteractorOut {
     private val loadingMut = MutableLiveData<Boolean>()
     private val errorMut: MutableLiveData<Unit> = SingleLiveEvent()
-    private val dataMut = MutableLiveData<ArrayList<AlbumsItem>>()
+    private val dataMut = MutableLiveData<List<AlbumsItem>>()
 
     val loading: LiveData<Boolean> get() = loadingMut
     val error: LiveData<Unit> get() = errorMut
-    val data: LiveData<ArrayList<AlbumsItem>> get() = dataMut
+    val data: LiveData<List<AlbumsItem>> get() = dataMut
 
     init {
         interactor.setupInteractorOut(this)
@@ -32,7 +32,7 @@ class MainViewModel @Inject constructor(private val interactor: MainInteractor) 
         loadingMut.value = loading
     }
 
-    override fun onLoaded(albums: ArrayList<AlbumsItem>) {
+    override fun onLoaded(albums: List<AlbumsItem>) {
         dataMut.value = albums
     }
 

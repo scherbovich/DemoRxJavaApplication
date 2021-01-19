@@ -16,7 +16,7 @@ abstract class BaseAdapter<T>: RecyclerView.Adapter<BaseViewHolder<T>>() {
         this.listener = null
     }
 
-    fun setList(dataList: ArrayList<T>) {
+    fun setList(dataList: List<T>) {
         this.dataList.addAll(dataList)
         hasItems = true
         notifyDataSetChanged()
