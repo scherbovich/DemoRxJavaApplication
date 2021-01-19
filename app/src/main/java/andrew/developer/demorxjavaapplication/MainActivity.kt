@@ -1,8 +1,8 @@
 package andrew.developer.demorxjavaapplication
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import andrew.developer.demorxjavaapplication.ui.main.MainFragment
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
