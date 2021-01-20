@@ -2,7 +2,7 @@ package andrew.developer.demorxjavaapplication.domain
 
 import io.reactivex.rxjava3.core.Single
 
-interface SingleUseCase<R> {
+interface RxSingleLauncher<R> {
 
     fun launch(
             onLoading: (Boolean) -> Unit,

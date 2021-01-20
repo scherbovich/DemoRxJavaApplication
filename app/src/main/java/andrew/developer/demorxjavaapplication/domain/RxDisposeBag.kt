@@ -1,6 +1,6 @@
 package andrew.developer.demorxjavaapplication.domain
 
-interface UseCase {
+interface RxDisposeBag {
 
     fun disposeLast()
     fun dispose()

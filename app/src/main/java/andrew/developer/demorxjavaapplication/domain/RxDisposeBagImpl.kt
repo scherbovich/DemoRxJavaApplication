@@ -3,7 +3,7 @@ package andrew.developer.demorxjavaapplication.domain
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
 
-abstract class UseCaseImpl: UseCase {
+abstract class RxDisposeBagImpl: RxDisposeBag {
     protected var lastDisposable: Disposable? = null
     protected val compositeDisposable = CompositeDisposable()
 

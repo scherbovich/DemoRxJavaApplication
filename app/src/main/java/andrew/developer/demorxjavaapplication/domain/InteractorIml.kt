@@ -1,6 +1,6 @@
 package andrew.developer.demorxjavaapplication.domain
 
-abstract class InteractorIml<T : InteractorOut, R> : Interactor<T>, SingleUseCaseImpl<R>() {
+abstract class InteractorIml<T : InteractorOut, R> : Interactor<T>, RxSingleLauncherImpl<R>() {
 
     protected lateinit var out: T
 
